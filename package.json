@@ -6,7 +6,8 @@
   "author": "Cyprien Autexier <2660262+sandorfr@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
-    "postinstall": "node postinstall.js"
+    "postinstall": "node postinstall.js",
+    "start": "docfx docfx_project/docfx.json --serve"
   },
   "dependencies": {
     "follow-redirects": "^1.5.0",
