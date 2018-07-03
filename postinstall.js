@@ -3,6 +3,34 @@ const unzipper = require("unzipper");
 const q = require("q");
 const fs = require("fs-extra");
 const path = require("path");
+const uri = require("url");
+
+const releasesUrl = 'https://api.github.com/repos/geeklearningio/gl-docs-theme/releases';
+
+function downloadJson(url, dest) {
+    var details = uri.parse(url)
+    let deferal = q.defer();
+    let content = '';
+    let request = https.get({
+        protocol: 'https:',
+        hostname : details.host,
+        path: details.path,
+        headers:{
+            'Accept' : ' application/vnd.github.v3+json' ,
+            'User-Agent' : 'YarnPostInstall'
+        }
+    }, (response) => {
+        response.on("end", () => {
+            deferal.resolve(JSON.parse(content));
+        }).on('data', function (chunk) {
+            content += chunk.toString('utf8');
+        });
+    }).on("error", (err) => {
+        deferal.reject(err);
+    });
+
+    return deferal.promise;
+}
 
 function downloadFile(url, dest) {
     let deferal = q.defer();
@@ -20,7 +48,11 @@ function downloadFile(url, dest) {
 }
 
 async function run() {
-    await downloadFile('https://github.com/geeklearningio/gl-docs-theme/releases/download/0.1.0/gl-template.zip',
+
+    var releases = await downloadJson(releasesUrl)
+    console.log(releases[0].assets[0].browser_download_url);
+    await downloadFile(
+        releases[0].assets[0].browser_download_url,
         './gl-template.zip');
 
     fs.ensureDirSync('./docfx_project/gl-template');
