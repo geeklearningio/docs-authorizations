@@ -1,3 +1,6 @@
+![](articles/images/Bouncer.png)
+
+
 # This is the **HOMEPAGE** for Bouncer
 
 Refer to [Markdown](http://daringfireball.net/projects/markdown/) for how to write markdown files.

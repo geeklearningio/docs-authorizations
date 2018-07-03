@@ -1,0 +1,17 @@
+{
+  "name": "docs-authorizations",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/geeklearningio/docs-authorizations.git",
+  "author": "Cyprien Autexier <2660262+sandorfr@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "postinstall": "node postinstall.js"
+  },
+  "dependencies": {
+    "follow-redirects": "^1.5.0",
+    "fs-extra": "^6.0.1",
+    "q": "^1.5.1",
+    "unzipper": "^0.9.0"
+  }
+}

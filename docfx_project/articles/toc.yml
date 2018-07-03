@@ -1,2 +1,13 @@
 - name: Introduction
   href: intro.md
+- name: What's new
+  href: what-s-new.md
+- name: Concepts
+  topicHref: concepts/concepts.md
+  items: 
+  - name: Scopes
+    href: concepts/scopes.md
+  - name: Principal
+    href: concepts/principal.md
+- name: Getting started
+  href: getting-started.md
