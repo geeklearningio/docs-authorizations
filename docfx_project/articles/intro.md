@@ -6,6 +6,19 @@ Bouncer provides all you need to setup a fine grained authorization model. It pl
 
 ## Features
 
-But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth.
+* Hierachical scope based rights provisionning
+* Item level security
+* Groups and groups hierarchy
+* Default `AuthorizationHandler` and `IAuthorizationRequirement` to plug ASP.NET Core Authorize attributes
+* ...
 
-![](images/diagram.png)
+## Supported repositories
+
+The library currently supports:
+* SQL Server with EF Core
+
+We consider providing an extensibility point to enable support of additional repositories.
+
+## Getting Started
+
+Please head on to the  [docs](articles/getting-started.md).
