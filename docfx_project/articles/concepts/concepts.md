@@ -85,7 +85,7 @@ Let say we are handling rights over a blog with the following fuctional requirem
 
 ## Scope model
 
-```
+```mermaid
 graph TD
     Blog[Blog] --> Post
     Post --> PostId
