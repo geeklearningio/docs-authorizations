@@ -3,9 +3,11 @@
     {
       "src": [
         {
+
           "files": [
-            "src/**.csproj"
-          ]
+            "gl-dotnet-authorizations/src/**.csproj"
+          ],
+          "src": "../../"
         }
       ],
       "dest": "api",
