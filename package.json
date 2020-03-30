@@ -10,9 +10,9 @@
     "start": "docfx docfx_project/docfx.json --serve"
   },
   "dependencies": {
-    "follow-redirects": "^1.5.0",
+    "follow-redirects": "^1.11.0",
     "fs-extra": "^6.0.1",
     "q": "^1.5.1",
-    "unzipper": "^0.9.0"
+    "unzipper": "^0.10.10"
   }
 }
